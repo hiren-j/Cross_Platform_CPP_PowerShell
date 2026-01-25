@@ -1,0 +1,17 @@
+PLACE ALL HEADERS AND CPP IN ONE PLACE, THEN DO THIS :-
+
+g++ *.cpp -o main.exe
+main.exe
+
+
+Meaning of both lines:
+Line 1:
+g++ = compiler, *.cpp = all C++ source files, -o = output flag, main.exe = executable name.
+
+Line 2:
+main.exe runs the compiled program.
+First line builds, second executes.
+
+-o (output flag) intuition:
+It tells the compiler where and with what name to place the final executable.
+Without -o, g++ creates a default a.exe (Windows) or a.out (Linux).

@@ -18,7 +18,7 @@ A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcom
   * Many-to-many input/output handling
 * 📂 **Batch file & directory operations**
 
-  * Create, delete, rename, copy multiple files/folders in one command
+  * Create, delete, rename, copy multiple files in one command
 * 🔁 **Enhanced PowerShell compatibility**
 
   * Removes single-target limitations of Windows PowerShell

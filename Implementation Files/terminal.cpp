@@ -29,6 +29,7 @@ namespace Terminal {
         std::cout << "|                              1. This PowerShell uses a dynamic command parsing engine with flexible spacing                       |\n";
         std::cout << "|                              2. Total input length is limited to 32000 characters per line                                        |\n";
         std::cout << "|                              3. Path-based arguments are not supported. Provide names only, not paths                             |\n";
+        std::cout << "|                              4. Run shell from the target directory                                                               |\n";
         std::cout << "|                                                                                                                                   |\n";
         std::cout << "+----------------------------------------------------- SHELL USAGE CONSTRAINTS -----------------------------------------------------+\n\n\n\n";
 

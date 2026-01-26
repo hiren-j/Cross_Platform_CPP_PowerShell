@@ -1,7 +1,7 @@
 ADD DEMO VIDEO - URGENT
 ---
 
-# 🚀 Custom PowerShell-Like Shell (C++)
+# 🚀 Custom PowerShell (C++)
 
 A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcome key limitations of Windows PowerShell** by supporting **batch operations, relaxed command parsing, and enhanced command behavior** across **Windows and Linux**.
 

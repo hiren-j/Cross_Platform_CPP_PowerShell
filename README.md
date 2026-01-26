@@ -110,6 +110,43 @@ g++ *.cpp -o shell
 ```
 ---
 
+
+---
+## 📘 Build Command Explanation (g++)
+
+## Line 1
+
+g++ *.cpp -o shell.exe
+
+### Meaning of Each Part
+- g++ → C++ compiler  
+- *.cpp → Compiles all C++ source files in the current directory  
+- -o → Output flag  
+- shell.exe → Name of the generated executable  
+
+This command builds the application.
+
+---
+
+## Line 2 runs the compiled program
+
+shell.exe
+
+---
+
+## -o (Output Flag)
+
+The -o flag instructs the compiler where and with what name to generate the final executable.
+
+If -o is omitted:
+- Windows → a.exe  
+- Linux → a.out  
+
+Using -o ensures clarity and avoids default executable names.
+---
+
+
+
 ---
 ## 🧠 Technical Overview
 

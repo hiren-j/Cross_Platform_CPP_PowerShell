@@ -31,7 +31,7 @@ A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcom
    * Strong validation and safety checks  
    * Memory-efficient parsing  
    * Clean, modular **C++17 implementation (LLD-focused)**
-   * 
+  
 ---
 
 ## 🎯 Motivation

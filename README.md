@@ -25,7 +25,13 @@ A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcom
 
   * Works on **Windows** and **Linux**
   * Portable, standard, and modern
+* 🧠 **Technical Strengths**
 
+   * OS-aware command behavior  
+   * Strong validation and safety checks  
+   * Memory-efficient parsing  
+   * Clean, modular **C++17 implementation (LLD-focused)**
+   * 
 ---
 
 ## 🎯 Motivation
@@ -143,18 +149,6 @@ If -o is omitted:
 - Linux → a.out  
 
 Using -o ensures clarity and avoids default executable names.
----
-
-
-
----
-## 🧠 Technical Overview
-
-* OS-aware command behavior
-* Strong validation and safety checks
-* Memory-efficient parsing
-* Clean modular design
-
 ---
 
 ## 📂 Project Structure

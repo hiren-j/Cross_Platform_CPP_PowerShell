@@ -1,7 +1,7 @@
 ADD DEMO VIDEO - URGENT
 ---
 
-# 🚀 Custom PowerShell (C++)
+# 🛠️ Custom PowerShell (C++)
 
 A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcome key limitations of Windows PowerShell** by supporting **batch operations, relaxed command parsing, and enhanced command behavior** with **Windows and Linux** Compatibility.
 
@@ -84,7 +84,7 @@ This shell was built to **remove those restrictions**, enabling:
 
 ---
 
-## 🛠️ Build & Run (PREFER VIDEO)
+## 🛠️ Build & Run [PREFER VIDEO](link)
 > **Build & Execution Guidelines**
 > - Before compiling, ensure all header files (`.hpp`), implementation files (`.cpp`), and `main.cpp` are located in the **same directory** to keep the build process simple.
 > - Use **`g++`** for compilation, as it is dedicated to C++ builds. Using `gcc` may lead to linking or standard library errors.

@@ -109,14 +109,12 @@ g++ *.cpp -o shell
 ./shell
 ```
 ---
-
-
----
 ## 📘 Build Command Explanation (g++)
 
 ## Line 1
-
+```
 g++ *.cpp -o shell.exe
+```
 
 ### Meaning of Each Part
 - g++ → C++ compiler  
@@ -130,7 +128,9 @@ This command builds the application.
 
 ## Line 2 runs the compiled program
 
+```
 shell.exe
+```
 
 ---
 

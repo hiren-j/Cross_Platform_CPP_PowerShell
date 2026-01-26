@@ -1,13 +1,6 @@
 #include "file_directory_management.hpp"
 #include "process_management.hpp"
 #include "terminal.hpp"
-#include <algorithm>
-#include <iostream>
-#include <unistd.h> // Targets LINUX chdir() 
-#include <cstdlib>  // Targets LINUX getenv() to fetch HOME directory
-#include <cctype>   
-#include <string>
-#include <vector>
 
 class PowerShell {
 public:

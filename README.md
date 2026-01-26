@@ -3,7 +3,7 @@ ADD DEMO VIDEO - URGENT
 
 # 🚀 Custom PowerShell (C++)
 
-A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcome key limitations of Windows PowerShell** by supporting **batch operations, relaxed command parsing, and enhanced command behavior** across **Windows and Linux**.
+A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcome key limitations of Windows PowerShell** by supporting **batch operations, relaxed command parsing, and enhanced command behavior** with **Windows and Linux** Compatibility.
 
 ---
 
@@ -24,8 +24,6 @@ A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcom
 * 🖥️ **Cross-platform**
 
   * Works on **Windows** and **Linux**
-* 🧩 **C++17+ filesystem API**
-
   * Portable, standard, and modern
 
 ---
@@ -54,6 +52,7 @@ This shell was built to **remove those restrictions**, enabling:
 => Total input length is limited to 32000 characters per line
 => Path-based arguments are NOT supported
 => Provide names only (run shell from target directory)
+=> Ensure C++17 or newer for the standard `std::filesystem` support
 -------------------------------------------------------------
 ```
 
@@ -69,9 +68,9 @@ This shell was built to **remove those restrictions**, enabling:
 | Create Directory        | `md`, `mkdir`                          | Create **multiple directories** in one command                                           |
 | List Directory          | `dir`, `ls`                            | Same behavior                                                                            |
 | Create File             | `type nul`, `touch`, `echo`            | Create **multiple files** in a single command                                            |
-| View / Merge Files      | `type`, `cat`                          | View multiple files; merge content into **any number of output files** using redirection |
+| View / Merge Files      | `type`, `cat`                          | View multiple files; when redirection (>) provided, merge content of multiple files and create **multiple new files**   |
 | Rename / Move           | `move`, `mv`, `rename`                 | Rename **multiple files** in one command (auto indexing)                                 |
-| Copy File               | `copy`, `cp`                           | Create **multiple copies** of a single source file                                       |
+| Copy File               | `copy`, `cp`                           | Create **multiple copies** of a single file                                              |
 | Delete File / Directory | `del`, `rmdir`, `rm`                   | Batch deletion of files and directories                                                  |
 | List Processes          | `tasklist`, `ps`                       | Same behavior                                                                            |
 | Kill Process            | `taskkill`, `kill`, `pkill`, `killall` | Accepts **multiple PIDs and/or process names** in one command                            |
@@ -79,8 +78,11 @@ This shell was built to **remove those restrictions**, enabling:
 
 ---
 
-## 🛠️ Build & Run
-
+## 🛠️ Build & Run (PREFER VIDEO)
+> **Build & Execution Guidelines**
+> - Before compiling, ensure all header files (`.hpp`), implementation files (`.cpp`), and `main.cpp` are located in the **same directory** to keep the build process simple.
+> - Use **`g++`** for compilation, as it is dedicated to C++ builds. Using `gcc` may lead to linking or standard library errors.
+> - If anything is unclear or you face issues while running the shell, **refer to the demo video first** for a quick walkthrough.
 ### 🔹 Requirements
 
 * **C++17 or later**
@@ -106,13 +108,9 @@ Works in **Command Prompt**, **PowerShell**, **MSYS2**, and **VS Code terminal**
 g++ *.cpp -o shell
 ./shell
 ```
-
 ---
 
-## 🎥 Video Demos
-👉 *[Add Windows demo video link here]*
 ---
-
 ## 🧠 Technical Overview
 
 * OS-aware command behavior

@@ -3,10 +3,7 @@ ADD DEMO VIDEO - URGENT
 
 # 🚀 Custom PowerShell-Like Shell (C++)
 
-> ⚠️ **ADD DEMO VIDEO – URGENT**
-> Please record short demo videos for Windows & Linux usage and attach the links below.
-
-A **cross-platform PowerShell-like shell** built in **C++ (C++17+)**, designed to **overcome key limitations of Windows PowerShell** by supporting **batch operations, relaxed command parsing, and enhanced command behavior** across **Windows and Linux**.
+A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcome key limitations of Windows PowerShell** by supporting **batch operations, relaxed command parsing, and enhanced command behavior** across **Windows and Linux**.
 
 ---
 
@@ -82,39 +79,6 @@ This shell was built to **remove those restrictions**, enabling:
 
 ---
 
-## 🔪 Kill Process — Platform-Specific Behavior
-
-### 🪟 Windows Rules
-
-* Do **NOT** include `.exe` in process names
-
-  * ❌ `chrome.exe`
-  * ✅ `chrome`
-* `taskkill <process_name>` → terminates **all instances**
-* `taskkill <PID>` → terminates **one instance**
-
-**Windows PID Limits**
-
-* Max PID value: `4294967295`
-* Max PID digits: `10`
-
----
-
-### 🐧 Linux Rules
-
-* Any process name enclosed in **`[ ]`** is treated as a **critical system process** and will be rejected
-
-  * ❌ `[bash]`
-* `kill <PID>` → one instance
-* `pkill <name>` / `killall <name>` → all instances
-
-**Linux PID Limits**
-
-* Max PID value: `4194304`
-* Max PID digits: `7`
-
----
-
 ## 🛠️ Build & Run
 
 ### 🔹 Requirements
@@ -146,18 +110,11 @@ g++ *.cpp -o shell
 ---
 
 ## 🎥 Video Demos
-
-* ▶️ **Windows Demo:**
-  👉 *[Add Windows demo video link here]*
-
-* ▶️ **Linux Demo:**
-  👉 *[Add Linux demo video link here]*
-
+👉 *[Add Windows demo video link here]*
 ---
 
 ## 🧠 Technical Overview
 
-* Uses `std::filesystem` (C++17+) for file operations
 * OS-aware command behavior
 * Strong validation and safety checks
 * Memory-efficient parsing

@@ -66,7 +66,7 @@ namespace Terminal {
         std::cout << "|                      |                                               | Achieve all of this in single command                      |\n";
         std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Rename / Move        | move, mv, rename                              | Rename multiple files in one command using a specified     |\n";
+        std::cout << "| Rename File          | move, mv, rename                              | Rename multiple files in one command using a specified     |\n";
         std::cout << "|                      |                                               | base name (automatic indexing applied)                     |\n";
         std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
 

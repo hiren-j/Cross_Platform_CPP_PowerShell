@@ -75,7 +75,7 @@ This shell was built to **remove those restrictions**, enabling:
 | List Directory          | `dir`, `ls`                            | Same behavior                                                                            |
 | Create File             | `type nul`, `touch`, `echo`            | Create **multiple files** in a single command                                            |
 | View / Merge Files      | `type`, `cat`                          | View multiple files; when redirection (>) provided, merge content of multiple files and create **multiple new files**   |
-| Rename / Move           | `move`, `mv`, `rename`                 | Rename **multiple files** in one command (auto indexing)                                 |
+| Rename                  | `move`, `mv`, `rename`                 | Rename **multiple files** in one command (auto indexing)                                 |
 | Copy File               | `copy`, `cp`                           | Create **multiple copies** of a single file                                              |
 | Delete File / Directory | `del`, `rmdir`, `rm`                   | Batch deletion of files and directories                                                  |
 | List Processes          | `tasklist`, `ps`                       | Same behavior                                                                            |

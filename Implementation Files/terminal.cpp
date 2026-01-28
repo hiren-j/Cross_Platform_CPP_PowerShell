@@ -29,88 +29,89 @@ namespace Terminal {
         std::cout << "|                              1. This PowerShell uses a dynamic command parsing engine with flexible spacing                       |\n";
         std::cout << "|                              2. Total input length is limited to 32000 characters per line                                        |\n";
         std::cout << "|                              3. Path-based arguments are not supported. Provide names only, not paths                             |\n";
-        std::cout << "|                              4. Run shell from the target directory                                                               |\n";
+        std::cout << "|                              4. For syntax/usage of modified commands, enter the command name and press Enter to view details     |\n";
+        std::cout << "|                              5. Run shell from the target directory                                                               |\n";
         std::cout << "|                                                                                                                                   |\n";
         std::cout << "+----------------------------------------------------- SHELL USAGE CONSTRAINTS -----------------------------------------------------+\n\n\n\n";
+        
 
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
-        std::cout << "| Category             | Commands                                      | Improvement Compared to Windows PowerShell                 |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Category             | Commands                                      | Modified Syntax (YES / NO)   | Improvement Compared to Windows PowerShell                 |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Exit                 | exit                                          | Same behavior                                              |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Exit                 | exit                                          | NO                           | Same behavior                                              |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Working Directory    | pwd, cd, cd~                                  | Same behavior                                              |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Working Directory    | pwd, cd, cd~                                  | NO                           | Same behavior                                              |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Change Directory     | cd .. , cd <dir>                              | Same behavior                                              |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Change Directory     | cd .. , cd <dir>                              | NO                           | Same behavior                                              |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Create Directory     | md, mkdir                                     | Create multiple directories in single command              |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Create Directory     | md, mkdir                                     | YES                          | Create multiple directories in single command              |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| List Directory       | dir, ls                                       | Same behavior                                              |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| List Directory       | dir, ls                                       | NO                           | Same behavior                                              |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Create File          | type nul, touch, echo                         | Create multiple files in single command                    |\n";
-        std::cout << "|                      |                                               |------------------------------------------------------------|\n";
-        std::cout << "|                      |                                               | Echo-specific behavior:                                    |\n";
-        std::cout << "|                      |                                               | Extra spaces in input are ignored, only a single space is  |\n";
-        std::cout << "|                      |                                               | preserved between tokens to reduce memory usage            |\n";
-        std::cout << "|                      |                                               | Output content is normalized to single-space tokens        |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Create File          | type nul, touch, echo                         | YES                          | Create multiple files in single command                    |\n";
+        std::cout << "|                      |                                               |                              |------------------------------------------------------------|\n";
+        std::cout << "|                      |                                               |                              | Echo-specific behavior:                                    |\n";
+        std::cout << "|                      |                                               |                              | Extra spaces in input are ignored, only a single space is  |\n";
+        std::cout << "|                      |                                               |                              | preserved between tokens to reduce memory usage            |\n";
+        std::cout << "|                      |                                               |                              | Output content is normalized to single-space tokens        |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| View / Merge Files   | type, cat                                     | View content of multiple files;                            |\n";
-        std::cout << "|                      |                                               | when redirection (>) is used, merge content of multiple    |\n";
-        std::cout << "|                      |                                               | files and create any number of new files;                  |\n";
-        std::cout << "|                      |                                               | Achieve all of this in single command                      |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| View / Merge Files   | type, cat                                     | YES                          | View content of multiple files;                            |\n";
+        std::cout << "|                      |                                               |                              | when redirection (>) is provided, merge content of         |\n";
+        std::cout << "|                      |                                               |                              | multiple files and create any number of new files;         |\n";
+        std::cout << "|                      |                                               |                              | Achieve all of this in single command                      |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Rename File          | move, mv, rename                              | Rename multiple files in one command using a specified     |\n";
-        std::cout << "|                      |                                               | base name (automatic indexing applied)                     |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Rename               | move, mv, rename                              | YES                          | Rename multiple files in one command using a specified     |\n";
+        std::cout << "|                      |                                               |                              | base name (automatic indexing applied)                     |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Copy File            | copy, cp                                      | Create multiple copies of a file in single command         |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Copy File            | copy, cp                                      | YES                          | Create multiple copies of a file in single command         |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Delete File / Dir    | del, rmdir, rm                                | Batch deletion of multiple files and directories together  |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Delete File / Dir    | del, rmdir, rm                                | YES                          | Batch deletion of multiple files and directories together  |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| List Processes       | tasklist, ps                                  | Same behavior                                              |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| List Processes       | tasklist, ps                                  | NO                           | Same behavior                                              |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Kill Process         | taskkill, kill/pkill/killall                  | Accepts any number of PIDs and/or process names in single  |\n";
-        std::cout << "|                      |                                               | command (mixed usage supported)                            |\n";
-        std::cout << "|                      |                                               |------------------------------------------------------------|\n";
-        std::cout << "|                      |                                               | Windows-specific behavior:                                 |\n";
-        std::cout << "|                      |                                               | Do not provide process names with the .exe extension       |\n";
-        std::cout << "|                      |                                               | Avoid writing the extension                                |\n";
-        std::cout << "|                      |                                               | Example (invalid): chrome.exe                              |\n";
-        std::cout << "|                      |                                               |                                                            |\n";
-        std::cout << "|                      |                                               | taskkill <process_name>  terminates all instances          |\n";
-        std::cout << "|                      |                                               | taskkill <PID>           terminates one instance           |\n";
-        std::cout << "|                      |                                               |                                                            |\n";
-        std::cout << "|                      |                                               | Windows-specific PID limits:                               |\n";
-        std::cout << "|                      |                                               | Maximum PID value: 4294967295                              |\n";
-        std::cout << "|                      |                                               | Maximum PID digits: 10                                     |\n";
-        std::cout << "|                      |                                               |------------------------------------------------------------|\n";
-        std::cout << "|                      |                                               | Linux-specific process behavior:                           |\n";
-        std::cout << "|                      |                                               | Any process name enclosed in [ ] is treated as a           |\n";
-        std::cout << "|                      |                                               | critical system process and will be rejected               |\n";
-        std::cout << "|                      |                                               | Example (invalid): [bash]                                  |\n";
-        std::cout << "|                      |                                               |                                                            |\n";
-        std::cout << "|                      |                                               | kill <PID>             terminates one instance             |\n";
-        std::cout << "|                      |                                               | pkill <process_name>   terminates all instances            |\n";
-        std::cout << "|                      |                                               | killall <process_name> terminates all instances            |\n";
-        std::cout << "|                      |                                               |                                                            |\n";
-        std::cout << "|                      |                                               | Linux-specific PID limits:                                 |\n";
-        std::cout << "|                      |                                               | Maximum PID value: 4194304                                 |\n";
-        std::cout << "|                      |                                               | Maximum PID digits: 7                                      |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
+        std::cout << "| Kill Process         | taskkill, kill/pkill/killall                  | YES                          | Accepts any number of PIDs and/or process names in single  |\n";
+        std::cout << "|                      |                                               |                              | command (mixed usage supported)                            |\n";
+        std::cout << "|                      |                                               |                              |------------------------------------------------------------|\n";
+        std::cout << "|                      |                                               |                              | Windows-specific behavior:                                 |\n";
+        std::cout << "|                      |                                               |                              | Do not provide process names with the .exe extension       |\n";
+        std::cout << "|                      |                                               |                              | Avoid writing the extension                                |\n";
+        std::cout << "|                      |                                               |                              | Example (invalid): chrome.exe                              |\n";
+        std::cout << "|                      |                                               |                              |                                                            |\n";
+        std::cout << "|                      |                                               |                              | taskkill <process_name>  terminates all instances          |\n";
+        std::cout << "|                      |                                               |                              | taskkill <PID>           terminates one instance           |\n";
+        std::cout << "|                      |                                               |                              |                                                            |\n";
+        std::cout << "|                      |                                               |                              | Windows-specific PID limits:                               |\n";
+        std::cout << "|                      |                                               |                              | Maximum PID value: 4294967295                              |\n";
+        std::cout << "|                      |                                               |                              | Maximum PID digits: 10                                     |\n";
+        std::cout << "|                      |                                               |                              |------------------------------------------------------------|\n";
+        std::cout << "|                      |                                               |                              | Linux-specific process behavior:                           |\n";
+        std::cout << "|                      |                                               |                              | Any process name enclosed in [ ] is treated as a           |\n";
+        std::cout << "|                      |                                               |                              | critical system process and will be rejected               |\n";
+        std::cout << "|                      |                                               |                              | Example (invalid): [bash]                                  |\n";
+        std::cout << "|                      |                                               |                              |                                                            |\n";
+        std::cout << "|                      |                                               |                              | kill <PID>             terminates one instance             |\n";
+        std::cout << "|                      |                                               |                              | pkill <process_name>   terminates all instances            |\n";
+        std::cout << "|                      |                                               |                              | killall <process_name> terminates all instances            |\n";
+        std::cout << "|                      |                                               |                              |                                                            |\n";
+        std::cout << "|                      |                                               |                              | Linux-specific PID limits:                                 |\n";
+        std::cout << "|                      |                                               |                              | Maximum PID value: 4194304                                 |\n";
+        std::cout << "|                      |                                               |                              | Maximum PID digits: 7                                      |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
 
-        std::cout << "| Clear Screen         | cls, clear                                    | Same behavior                                              |\n";
-        std::cout << "+----------------------+-----------------------------------------------+------------------------------------------------------------+\n";
-
+        std::cout << "| Clear Screen         | cls, clear                                    | NO                           | Same behavior                                              |\n";
+        std::cout << "+----------------------+-----------------------------------------------+------------------------------+------------------------------------------------------------+\n";
     }  
 
     void showBanner() {

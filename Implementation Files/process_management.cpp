@@ -103,7 +103,7 @@ void ProcessManagement::killProcessByName(const std::string& process_name, const
                 nullptr
             };
 
-        if(execvp("killall", (char* const*)c_args) == -1) { // Execute command
+            if(execvp("killall", (char* const*)c_args) == -1) { // Execute command
                 std::cerr << process_counter 
                           << ". Error: Failed to kill process '" << process_name << "'\n" 
                           << "   Description: " << strerror(errno) << '\n';

@@ -36,6 +36,8 @@ A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcom
 
 ## 🎯 Motivation
 
+While working with **commonly used (popular) PowerShell commands**, I observed several practical limitations in Windows PowerShell.
+
 Windows PowerShell often restricts:
 
 * Creating only **one file or directory per command**

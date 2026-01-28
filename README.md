@@ -56,8 +56,9 @@ This shell was built to **remove those restrictions**, enabling:
 ------------------ SHELL USAGE CONSTRAINTS ------------------
 => Dynamic command parsing with flexible spacing
 => Total input length is limited to 32000 characters per line
-=> Path-based arguments are NOT supported
-=> Provide names only (run shell from target directory)
+=> Path-based arguments are NOT supported, Provide names only
+=> For syntax/usage of modified commands, enter the command name and press Enter to view details
+=> Run shell from the target directory
 => Ensure C++17 or newer for the standard `std::filesystem` support
 -------------------------------------------------------------
 ```

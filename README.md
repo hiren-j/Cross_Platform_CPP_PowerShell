@@ -10,7 +10,7 @@ A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcom
 ## ✨ Key Highlights
 
 * ⚙️ **30+ shell commands implemented**
-* 🧠 **Dynamic command parsing engine with flexible spacing**
+* 🧠 **Dynamic command parsing engine**
 
   * Flexible spacing
   * Relaxed syntax

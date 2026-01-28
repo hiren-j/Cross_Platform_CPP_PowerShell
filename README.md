@@ -10,7 +10,7 @@ A **cross-platform-powershell** built in **C++ (C++17+)**, designed to **overcom
 ## ✨ Key Highlights
 
 * ⚙️ **30+ shell commands implemented**
-* 🧠 **Dynamic command parsing engine**
+* 🧠 **Dynamic command parsing engine with flexible spacing**
 
   * Flexible spacing
   * Relaxed syntax
@@ -54,7 +54,6 @@ This shell was built to **remove those restrictions**, enabling:
 
 ```
 ------------------------------------SHELL USAGE CONSTRAINTS -------------------------------------
-=> Dynamic command parsing with flexible spacing
 => Total input length is limited to 32000 characters per line
 => Path-based arguments are NOT supported, Provide names only
 => For syntax/usage of modified commands, enter the command name and press Enter to view details

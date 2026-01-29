@@ -35,7 +35,7 @@ public:
     bool hasOnlyDots(const std::string& name);
     bool isValid(const std::string& name);
     void __delete(const std::vector<std::string>& fileDirs, const std::string& cmd);
-    std::vector<std::string> getNames(const std::vector<std::string>& args, std::size_t start, std::size_t end, char skipChar);
+    std::vector<std::string> getNames(const std::vector<std::string>& strs, std::size_t start, std::size_t end, char skipChar);
 };
 
 class FileManagement : private FileDirectoryManagement {
@@ -48,7 +48,7 @@ private:
 public:    
     void makeFile(const std::vector<std::string>& files, std::string& filecontent, int query = -1);
     void renameFile(const std::vector<std::string>& oldnames, std::string& newname);
-    void copyFile(const std::string& sourceFile, const std::vector<std::string>& args);
+    void copyFile(const std::string& sourceFile, const std::vector<std::string>& strs);
     void mergeFileContent(const std::vector<std::string>& contentFiles, const std::vector<std::string>& outputFiles);
     void showFileContent(const std::vector<std::string>& files);
 };

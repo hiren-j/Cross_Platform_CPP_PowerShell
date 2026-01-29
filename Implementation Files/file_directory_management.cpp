@@ -88,19 +88,19 @@ void FileDirectoryManagement::__delete(const std::vector<std::string>& fileDirs,
     }
 }
 
-std::vector<std::string> FileDirectoryManagement::getNames(const std::vector<std::string>& args, std::size_t start, std::size_t end, char skipChar) {
+std::vector<std::string> FileDirectoryManagement::getNames(const std::vector<std::string>& strs, std::size_t start, std::size_t end, char skipChar) {
     std::vector<std::string> listOfNames;
 
-    const std::string& str = args[start];
-    if(str[0] == skipChar) {
+    const std::string& s = strs[start];
+    if(s[0] == skipChar) {
         std::string name;
-        for(std::size_t i = 1; i < str.size(); ++i) name += str[i];    
+        for(std::size_t i = 1; i < s.size(); ++i) name += s[i];    
         if(!name.empty()) listOfNames.push_back(name);
         start++;
     }
     
     while(start < end) {
-        listOfNames.push_back(args[start]);
+        listOfNames.push_back(strs[start]);
         start++;
     }
     return listOfNames;
@@ -221,7 +221,7 @@ void FileManagement::renameFile(const std::vector<std::string>& oldnames, std::s
     }
 }
 
-void FileManagement::copyFile(const std::string& sourceFile, const std::vector<std::string>& args) {
+void FileManagement::copyFile(const std::string& sourceFile, const std::vector<std::string>& strs) {
     if(!isValid(sourceFile) || isDirectory(sourceFile)) {
         std::cerr << "Error: Cannot accept source name '" 
                   << sourceFile << "' (invalid name or directory already exists)\n";
@@ -235,7 +235,7 @@ void FileManagement::copyFile(const std::string& sourceFile, const std::vector<s
         std::string filecontent;       
         getFileContent(sourceFile, filecontent);     
 
-        std::vector<std::string> newFiles = getNames(args, 2, args.size(), '\0');
+        std::vector<std::string> newFiles = getNames(strs, 2, strs.size(), '\0');
         std::size_t filenumber = 1;
 
         for(const auto& filename : newFiles) {

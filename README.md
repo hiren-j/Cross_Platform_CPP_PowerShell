@@ -88,7 +88,7 @@ This shell was built to **remove those restrictions**, enabling:
 
 ## 🛠️ Build & Run
 > If you don't want the hassle of creating the `.exe` yourself, you can quickly download the pre-built executable:
-<br> 👉 [Download `shell.exe`](https://github.com/hiren-j/Cross_Platform_CPP_PowerShell/blob/master/shell.exe)
+<br> 👉 [Click To Download App](https://github.com/hiren-j/Cross_Platform_CPP_PowerShell/blob/master/PowerX.exe)
 
 > **Build & Execution Guidelines**
 > - Before compiling, ensure all header files (`.hpp`), implementation files (`.cpp`), and `main.cpp` are located in the **same directory** to keep the build process simple.

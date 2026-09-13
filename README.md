@@ -86,7 +86,10 @@ This shell was built to **remove those restrictions**, enabling:
 
 ---
 
-## 🛠️ Build & Run [PREFER VIDEO](link)
+## 🛠️ Build & Run
+> If you don't want the hassle of creating the `.exe` yourself, you can quickly download the pre-built executable:
+👉 [Download `shell.exe`](https://github.com/hiren-j/Cross_Platform_CPP_PowerShell/blob/master/shell.exe)
+
 > **Build & Execution Guidelines**
 > - Before compiling, ensure all header files (`.hpp`), implementation files (`.cpp`), and `main.cpp` are located in the **same directory** to keep the build process simple.
 > - Use **`g++`** for compilation, as it is dedicated to C++ builds. Using `gcc` may lead to linking or standard library errors.
